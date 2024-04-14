@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.BuyCharge">
+   <children>
+      <AnchorPane layoutX="-189.0" layoutY="107.0" prefHeight="65.0" prefWidth="753.0" style="-fx-background-color: #d9d9d9;" />
+      <AnchorPane layoutX="205.0" layoutY="74.0" prefHeight="621.0" prefWidth="65.0" rotate="39.8" style="-fx-background-color: white;" />
+      <Label fx:id="lblBuyCharge" layoutX="167.0" layoutY="38.0" text="Buy charge" textFill="WHITE">
+         <font>
+            <Font name="Freestyle Script" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlease" layoutX="14.0" layoutY="80.0" text="Please Enter Phone Number:" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" layoutX="-35.0" layoutY="-25.0" mnemonicParsing="false" onAction="#Back" prefHeight="57.0" prefWidth="65.0" style="-fx-background-color: #6f809a;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgBack" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="TxtPhoneNumber" layoutX="30.0" layoutY="125.0" prefHeight="25.0" prefWidth="206.0" styleClass="Text-Field" />
+      <Label fx:id="lblEror" alignment="CENTER" layoutX="28.0" layoutY="4.0" prefHeight="32.0" prefWidth="347.0" style="-fx-background-color: blue;" text="wellcome to Asral bank" textFill="RED">
+         <font>
+            <Font name="Lucida Fax Regular" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnCharge" layoutX="9.0" layoutY="499.0" mnemonicParsing="false" onAction="#Charge" prefHeight="42.0" prefWidth="391.0" styleClass="Button-Charge" text="       Charge" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblpluse" disable="true" layoutX="167.0" layoutY="491.0" prefHeight="50.0" prefWidth="27.0" text="+" textFill="WHITE">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

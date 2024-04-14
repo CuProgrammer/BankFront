@@ -1,0 +1,5 @@
+*.txt
+mvnw*
+pom.xml
+target/
+.idea

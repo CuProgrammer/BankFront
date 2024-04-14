@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.PayingBills">
+    <children>
+        <Label fx:id="lbltransfer" alignment="CENTER" layoutX="155.0" layoutY="10.0" text="Paying bills">
+            <font>
+                <Font name="Freestyle Script" size="32.0" />
+            </font>
+        </Label>
+        <ListView fx:id="listTransfer" layoutX="-1.0" layoutY="76.0" prefHeight="462.0" prefWidth="410.0" style="-fx-background-radius: 0;" styleClass="card1" />
+        <Button fx:id="Back" layoutX="-24.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="54.0" style="-fx-background-radius: 20;" stylesheets="@FirstCss.css">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ImageView fx:id="imgBack" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+        </ImageView>
+        <Button layoutX="27.0" layoutY="535.930452560108" mnemonicParsing="false" onAction="#purchase" prefHeight="45.0" prefWidth="409.0" text="Process" textFill="#080101" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="536.0">
+            <font>
+                <Font name="Freestyle Script" size="22.0" />
+            </font>
+        </Button>
+        <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="390.0" styleClass="transfer" AnchorPane.bottomAnchor="407.9304525601081" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000636888603" AnchorPane.topAnchor="128.0">
+         <children>
+            <Button fx:id="switch_btn" layoutX="229.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" text="پرداخت قبوض تلفن">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="switch_btn1" layoutX="41.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" text="پرداخت با شناسه">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="slidelabel" layoutX="14.0" layoutY="-1.0" prefHeight="45.0" prefWidth="154.0" styleClass="label3" visible="false" />
+         </children>
+        </AnchorPane>
+      <Label layoutX="212.0" layoutY="101.0" text="نوع پرداخت قبض خود را مشخض کنید:">
+         <font>
+            <Font name="System Bold" size="11.686956405639648" />
+         </font></Label>
+      <AnchorPane fx:id="dayloan" layoutX="-1.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="transfer" visible="false">
+         <children>
+            <Button fx:id="BtnSabtShomareTelephone" layoutX="158.0" layoutY="157.0" mnemonicParsing="false" onAction="#BtnSabtShomareTelephone" text="ثبت شماره تلفن" />
+            <Label layoutX="217.0" layoutY="28.0" text="لطفا شماره تلفن خود را وارد کنید  :">
+               <font>
+                  <Font name="System Bold" size="11.686956405639648" />
+               </font>
+            </Label>
+            <TextField fx:id="TxtPhoneNum" layoutX="130.0" layoutY="91.0" style="-fx-background-radius: 10;" styleClass="button" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="showprice" layoutX="-1.0" layoutY="394.0" prefHeight="142.0" prefWidth="409.0" visible="false">
+         <children>
+            <Label layoutX="280.0" layoutY="14.0" text="اطلاعات قبض :" textFill="#b1b1b1">
+               <font>
+                  <Font name="2  Nazanin" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="amount" layoutX="267.0" layoutY="62.0" prefHeight="28.0" prefWidth="80.0" textFill="#869087">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" layoutX="188.0" layoutY="62.0" textFill="#869087">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="sood" layoutX="114.0" layoutY="62.0" textFill="#869087">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="weekloan" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="transfer" visible="false">
+         <children>
+            <Button fx:id="Btnsabt" layoutX="193.0" layoutY="153.0" mnemonicParsing="false" onAction="#week2" text="ثبت" />
+            <Label fx:id="lblShenase" layoutX="211.0" layoutY="26.0" text="لطفا شناسه های قبض خود را وارد کنید  :">
+               <font>
+                  <Font name="System Bold" size="11.686956405639648" />
+               </font>
+            </Label>
+            <TextField fx:id="TxtShenasePardakht" alignment="TOP_RIGHT" layoutX="229.0" layoutY="79.0" promptText="شناسه پرداخت" />
+            <TextField fx:id="TxtShenaseGabz" alignment="TOP_RIGHT" layoutX="44.0" layoutY="79.0" promptText="شناسه قبض" />
+         </children>
+      </AnchorPane>
+      <ImageView disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

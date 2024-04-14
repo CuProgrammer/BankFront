@@ -1,0 +1,84 @@
+package sample.asteralbank;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class HelloController {
+
+    @FXML
+    private Label Account;
+
+    @FXML
+    private Label lblEror;
+
+    @FXML
+    private Label Astral;
+
+    @FXML
+    private PasswordField Password;
+
+    @FXML
+    private TextField TxtUserName;
+
+    @FXML
+    private Button btnSignUp;
+
+    @FXML
+    private Button btnSignin;
+
+    @FXML
+    void Password(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SignUp(ActionEvent event) throws IOException {
+        Stage stage =(Stage) btnSignUp.getScene().getWindow();
+        stage.close();
+        Stage primaryStage=new Stage();
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Scene scene = new Scene(root, 419, 629);
+        stage.getIcons().add(new Image(HelloController.class.getResourceAsStream("logo.png")));
+        stage.setResizable(false);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+
+    }
+
+    @FXML
+    void Signin(ActionEvent event) throws IOException {
+
+        String username = TxtUserName.getText();
+        String password = Password.getText();
+        System.out.println("REACHED HERE!");
+        INFO.user = INFO.userManager.login(username, password);
+        System.out.println("GOT USER!");
+        if (INFO.user == null) {
+            lblEror.setText("WRONG USERNAME OR PASSWORD, GET RECKT LOSER");
+            return;
+        }
+
+        Stage stage =(Stage) btnSignin.getScene().getWindow();
+        stage.close();
+        Stage primaryStage=new Stage();
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Manager.fxml"));
+        Scene scene = new Scene(root, 658 ,473);
+        stage.setResizable(false);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
+
+}

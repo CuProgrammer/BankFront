@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.BuyCharge2">
+   <children>
+      <AnchorPane layoutX="-189.0" layoutY="107.0" prefHeight="65.0" prefWidth="753.0" style="-fx-background-color: #d9d9d9;" />
+      <AnchorPane layoutX="205.0" layoutY="74.0" prefHeight="621.0" prefWidth="65.0" rotate="39.8" style="-fx-background-color: white;" />
+      <Label fx:id="lblPhoneNumber" layoutX="147.0" layoutY="178.0" text="Phone Number" textFill="WHITE">
+         <font>
+            <Font name="Agency FB" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCash" alignment="CENTER" layoutX="127.0" layoutY="84.0" prefHeight="69.0" prefWidth="154.0" style="-fx-background-color: red;" text="50 $">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBuyCharge" layoutX="166.0" layoutY="14.0" text="Buy charge" textFill="WHITE">
+         <font>
+            <Font name="Freestyle Script" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="-35.0" layoutY="172.0" text=". . . . . . . . . . . . . . . . . . . .">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="14.0" layoutY="307.0" prefHeight="248.0" prefWidth="171.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblTime" text="Time">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblReferenceNo" text="Reference No" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIssueTracking" text="Issue Tracking" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPaymentFromTheAccount" text="Payment from the account" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="238.0" layoutY="307.0" prefHeight="248.0" prefWidth="171.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="lblDate" text="سه شنبه.19 اسفند 1402 18:15" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Agency FB" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblReferenceNoNumber" text="14021494665754" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIssueTrackingNumber" text="1239866093" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIRNumber" text="IR - 32 0560 6118 2800 5498 2092 01" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Agency FB" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label fx:id="lblSuccessfulPayment" layoutX="86.0" layoutY="245.0" prefHeight="34.0" prefWidth="204.0" styleClass="payment" text="      Successful payment">
+         <font>
+            <Font name="Agency FB" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgTick50" fitHeight="24.0" fitWidth="38.0" layoutX="250.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Tick50.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Back" layoutX="-32.0" layoutY="-25.0" mnemonicParsing="false" onAction="#Back" prefHeight="57.0" prefWidth="57.0" style="-fx-background-color: #6f809a;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgBack" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Home" layoutX="29.0" layoutY="-24.0" mnemonicParsing="false" onAction="#Home" prefHeight="57.0" prefWidth="34.0" style="-fx-background-color: #6f809a;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgHome" disable="true" fitHeight="25.0" fitWidth="27.0" layoutX="34.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Home.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

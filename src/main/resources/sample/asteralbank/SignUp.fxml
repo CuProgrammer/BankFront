@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.SignUp">
+   <children>
+      <ImageView fitHeight="635.0" fitWidth="433.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSignUp" layoutX="173.0" layoutY="584.0" mnemonicParsing="false" onAction="#SignUp" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@FirstCss.css" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="TxtUserName" alignment="CENTER" layoutX="118.0" layoutY="27.0" prefHeight="31.0" prefWidth="184.0" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtLastName" alignment="CENTER" layoutX="118.0" layoutY="77.0" prefHeight="31.0" prefWidth="184.0" promptText="Last Name" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtBirthdayYear" alignment="CENTER" layoutX="118.0" layoutY="128.0" prefHeight="31.0" prefWidth="47.0" promptText="Year" style="-fx-background-color: #3c6e71; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtNIN" alignment="CENTER" layoutX="118.0" layoutY="230.0" prefHeight="31.0" prefWidth="184.0" promptText="NIN(ID)" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtPhoneNumber" alignment="CENTER" layoutX="118.0" layoutY="330.0" prefHeight="31.0" prefWidth="184.0" promptText="Phone Number" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtUserName" alignment="CENTER" layoutX="118.0" layoutY="430.0" prefHeight="31.0" prefWidth="184.0" promptText="User Name" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtEmail" alignment="CENTER" layoutX="118.0" layoutY="280.0" prefHeight="31.0" prefWidth="184.0" promptText="E-Mail" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="TxtPostCode" alignment="CENTER" layoutX="118.0" layoutY="380.0" prefHeight="31.0" prefWidth="184.0" promptText="Post Code" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="78.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@User%20Name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="78.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="78.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Birthday.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="78.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@E-Mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="27.0" layoutX="78.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Gender.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="27.0" layoutX="78.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@NAme.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="78.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Phone%20number.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="78.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Post%20Code.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="27.0" layoutX="78.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@NIN2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="27.0" layoutX="78.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Last%20Name.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="TxtBirthdayMonth" alignment="CENTER" layoutX="186.0" layoutY="128.0" prefHeight="31.0" prefWidth="47.0" promptText="Month" style="-fx-background-color: #3c6e71; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtBirthdayDay" alignment="CENTER" layoutX="255.0" layoutY="128.0" prefHeight="31.0" prefWidth="47.0" promptText="Day" style="-fx-background-color: #3c6e71; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Label layoutX="168.0" layoutY="126.0" text="/">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="126.0" text="/">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" layoutX="-45.0" layoutY="-29.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="73.0" style="-fx-background-radius: 20;" stylesheets="@FirstCss.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="TxtPassword" alignment="CENTER" layoutX="118.0" layoutY="480.0" prefHeight="31.0" prefWidth="184.0" promptText="Password" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;" />
+      <Label fx:id="lblEror" alignment="CENTER" layoutX="28.0" layoutY="-2.0" prefHeight="32.0" prefWidth="373.0" text="wellcome to Asral bank" textFill="RED">
+         <font>
+            <Font name="Lucida Fax Regular" size="15.0" />
+         </font>
+      </Label>
+      <SplitMenuButton alignment="CENTER" layoutX="118.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" stylesheets="@FirstCss.css" text="Type Account">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Saving" />
+          <MenuItem mnemonicParsing="false" text="Loan" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+      <SplitMenuButton alignment="CENTER" layoutX="118.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" text="Gender">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+      <ImageView fitHeight="97.0" fitWidth="27.0" layoutX="78.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Account%20type.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

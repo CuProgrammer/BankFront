@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.Manager">
+   <children>
+      <TabPane fx:id="TabPane" prefHeight="473.0" prefWidth="658.0" stylesheets="@FirstCss.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="TabAdmin" style="-fx-background-color: #3c6e71;" text="Admin's Data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="item-Css">
+                     <children>
+                        <ListView fx:id="ListAdmin" prefHeight="446.0" prefWidth="658.0" styleClass="item-Css" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="TabUsersData" style="-fx-background-color: #3c6e71;" text="Users Data">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="item-Css">
+                     <children>
+                        <ListView fx:id="ListUsersData" layoutY="-1.0" prefHeight="446.0" prefWidth="658.0" styleClass="item-Css" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="TabLastTransfers" style="-fx-background-color: #3c6e71;" text="Last 10 transfers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="item-Css">
+                     <children>
+                        <ListView fx:id="ListLastTransfers" prefHeight="446.0" prefWidth="658.0" styleClass="item-Css" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <styleClass>
+            <String fx:value="tab-down-button" />
+            <String fx:value="jfx-tab-pane" />
+            <String fx:value="control-buttons-tab" />
+            <String fx:value="jfx-rippler" />
+            <String fx:value="tab-pane" />
+            <String fx:value="tab-header-background" />
+            <String fx:value="tab-background" />
+         </styleClass>
+      </TabPane>
+      <Button fx:id="Exit" layoutX="617.0" layoutY="-29.0" mnemonicParsing="false" onAction="#Exit" prefHeight="60.0" prefWidth="35.0" style="-fx-background-radius: 5;" stylesheets="@FirstCss.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgExit" disable="true" fitHeight="33.0" fitWidth="30.0" layoutX="622.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Exit.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Settings" layoutX="583.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Settings" prefHeight="60.0" prefWidth="30.0" style="-fx-background-radius: 5;" stylesheets="@FirstCss.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgSettings" disable="true" fitHeight="30.0" fitWidth="23.0" layoutX="587.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Setting.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
