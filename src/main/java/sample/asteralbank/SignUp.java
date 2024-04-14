@@ -1,5 +1,7 @@
 package sample.asteralbank;
 
+import com.blackbank.bank.Gender;
+import com.blackbank.bank.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

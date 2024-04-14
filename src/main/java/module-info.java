@@ -13,6 +13,7 @@ module sample.asteralbank {
     requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.datatype.jsr310;
+    requires Bank;
 
     opens sample.asteralbank to javafx.fxml;
     exports sample.asteralbank;
