@@ -4,6 +4,7 @@ import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -15,8 +16,10 @@ import javafx.util.Duration;
 import org.w3c.dom.events.Event;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Main {
+public class Main implements Initializable {
 
     @FXML
     private Button Back;
@@ -55,7 +58,7 @@ public class Main {
     private Button Btncheck;
 
     @FXML
-    private Label lblNum1;
+    public Label lblNum1;
 
     @FXML
     private Label lblNum11;
@@ -64,13 +67,23 @@ public class Main {
     private Label lblNum111;
 
     @FXML
-    private Label lblNum2;
+    public Label lblNum2;
 
     @FXML
-    private Label lblNum3;
+    public Label lblNum3;
 
     @FXML
-    private Label lblNum4;
+    public Label lblNum4;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        String cardNumber = DataRepository.user.getUsername();
+        lblNum1.setText(cardNumber.substring(0, 4));
+        lblNum2.setText(cardNumber.substring(4, 8));
+        lblNum3.setText(cardNumber.substring(8, 12));
+        lblNum4.setText(cardNumber.substring(12, 16));
+    }
 
     @FXML
     void Back(ActionEvent event) throws IOException {

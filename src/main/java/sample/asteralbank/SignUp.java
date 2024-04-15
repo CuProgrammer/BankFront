@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import sample.asteralbank.Main;
 
 public class SignUp {
 
@@ -89,7 +90,10 @@ public class SignUp {
         Person person = new Person(name, gender, birthDate);
         String password = TxtPassword.getText();
         String cardNumber = DataRepository.userManager.addAccount(password, person, 100);
+        DataRepository.userManager.activateUser(cardNumber);
+        DataRepository.user = DataRepository.userManager.login(cardNumber, password);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
         alert.setHeaderText(null);
         alert.setContentText("Your card number is " + cardNumber);
         alert.showAndWait();
@@ -103,6 +107,12 @@ public class SignUp {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+
+
+    }
+
+    void setUserInformation() {
+        String cardNumber = DataRepository.user.getUsername();
 
     }
 
