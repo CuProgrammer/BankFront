@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Signin.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 386,588);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.getIcons().add(new Image(HelloController.class.getResourceAsStream("Icon.jpg")));
         stage.setResizable(false);
         stage.setTitle("Astral");

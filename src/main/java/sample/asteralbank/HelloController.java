@@ -71,7 +71,11 @@ public class HelloController {
         Stage stage =(Stage) btnSignin.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
-        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Manager.fxml"));
+        AnchorPane root = null;
+        if (DataRepository.userManager.getUserType(username).equals("admin"))
+            root = (AnchorPane) FXMLLoader.load(getClass().getResource("Manager.fxml"));
+        else if (DataRepository.userManager.getUserType(username).equals("account"))
+            root = (AnchorPane) FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root, 658 ,473);
         stage.setResizable(false);
         primaryStage.setScene(scene);

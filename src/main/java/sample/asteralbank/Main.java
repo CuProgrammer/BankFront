@@ -1,5 +1,6 @@
 package sample.asteralbank;
 
+import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import org.w3c.dom.events.Event;
 
 import java.io.IOException;
 
@@ -185,4 +189,191 @@ public class Main {
 
     }
 
+
+     @FXML
+     void Resize1(javafx.scene.input.MouseEvent mouseEvent ) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(200));
+        Event even;
+        if (mouseEvent.getSource()==BtnAccountType){
+            st.setNode(BtnAccountType);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnMoneytransfer){
+            st.setNode(BtnMoneytransfer);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==Btncheck){
+            st.setNode(Btncheck);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnBuyaninternet){
+            st.setNode(BtnBuyaninternet);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnBuyrecharge){
+            st.setNode(BtnBuyrecharge);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnCommunications){
+            st.setNode(BtnCommunications);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();}
+        else if (mouseEvent.getSource()==BtnTurnover){
+            st.setNode(BtnTurnover);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnInventory){
+            st.setNode(BtnInventory);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnPayingbills){
+            st.setNode(BtnPayingbills);
+            st.setToX(1.1);
+            st.setToY(1.1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+    }
+
+    public void Resize2(javafx.scene.input.MouseEvent mouseEvent) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(200));
+        Event even;
+        if (mouseEvent.getSource()==BtnAccountType){
+            st.setNode(BtnAccountType);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnMoneytransfer){
+            st.setNode(BtnMoneytransfer);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==Btncheck){
+            st.setNode(Btncheck);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnBuyaninternet){
+            st.setNode(BtnBuyaninternet);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnBuyrecharge){
+            st.setNode(BtnBuyrecharge);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnCommunications){
+            st.setNode(BtnCommunications);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();}
+        else if (mouseEvent.getSource()==BtnTurnover){
+            st.setNode(BtnTurnover);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnInventory){
+            st.setNode(BtnInventory);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnPayingbills){
+            st.setNode(BtnPayingbills);
+            st.setToX(1);
+            st.setToY(1);
+            st.setCycleCount(1);
+            st.setAutoReverse(true);
+            st.play();
+        }
+    }
+
+    @FXML
+    public void Resize3(MouseEvent mouseEvent) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(100));
+        if(mouseEvent.getSource()==BtnCart1){
+            st.setNode(BtnCart1);
+            st.setToX(1.05);
+            st.setToY(1.05);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnCart2){
+            st.setNode(BtnCart2);
+            st.setToX(1.05);
+            st.setToY(1.05);
+            st.play();
+        }
+    }
+
+    @FXML
+    public void Resize4(MouseEvent mouseEvent) {
+        ScaleTransition st = new ScaleTransition(Duration.millis(100));
+        if(mouseEvent.getSource()==BtnCart1){
+            st.setNode(BtnCart1);
+            st.setToX(1);
+            st.setToY(1);
+            st.play();
+        }
+        else if (mouseEvent.getSource()==BtnCart2){
+            st.setNode(BtnCart2);
+            st.setToX(1);
+            st.setToY(1);
+            st.play();
+        }
+    }
 }
