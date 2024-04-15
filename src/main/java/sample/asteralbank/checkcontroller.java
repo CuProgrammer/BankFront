@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.time.LocalDate;
 import java.util.HashMap;
 
@@ -235,6 +236,24 @@ public class checkcontroller {
 
     @FXML
     void showcheck(ActionEvent event) throws InterruptedException {
+
+        for(Field field: getClass().getDeclaredFields()){
+            if(TextField.class.isAssignableFrom(field.getType())){
+
+                try {
+                    boolean full = !((TextField) field.get(this)).getText().isEmpty();
+                    if (!full) {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Bruh");
+                        alert.setContentText("please fill " + ((TextField) field.get(this)).getId());
+                        alert.showAndWait();
+                        return;
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
         String text = checkamountDigit.getText();
         double number = PersianNumberer.convertPersianToDouble(text);
         String amount = checkamountNum.getText();
@@ -261,9 +280,4 @@ public class checkcontroller {
 
 
     }
-
-
-
-
-
 }
