@@ -2,6 +2,7 @@ package sample.asteralbank;
 
 import java.io.IOException;
 
+import com.blackbank.bank.Loan;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -78,6 +79,10 @@ public class loancontroller {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("اطلاعات وام درخواستی شما به کارشناس مربوطه جهت برسی ارجاع شد !");
         alert.showAndWait();
+
+
+        Loan loan = new Loan(DataRepository.user, Double.parseDouble(amount.getText()), false);
+        DataRepository.loanManager.add(loan);
         Stage stage=new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

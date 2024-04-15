@@ -209,7 +209,15 @@ public class Main implements Initializable {
     }
 
     @FXML
-    void Btncheck(ActionEvent event) {
+    void Btncheck(ActionEvent event) throws IOException {
+        Stage stage =(Stage) Btncheck.getScene().getWindow();
+        stage.close();
+        Stage primaryStage=new Stage();
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("check.fxml"));
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 
