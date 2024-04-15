@@ -229,17 +229,17 @@
             <Font name="Agency FB" size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" disable="true" layoutX="409.0" layoutY="94.0" prefHeight="21.0" prefWidth="267.0" text="Name" textFill="WHITE">
+      <Label fx:id="lblName" alignment="CENTER" disable="true" layoutX="409.0" layoutY="94.0" prefHeight="21.0" prefWidth="267.0" text="Name" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" disable="true" layoutX="409.0" layoutY="132.0" prefHeight="21.0" prefWidth="267.0" text="Last Name" textFill="WHITE">
+      <Label fx:id="lblLastName" alignment="CENTER" disable="true" layoutX="409.0" layoutY="132.0" prefHeight="21.0" prefWidth="267.0" text="Last Name" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" disable="true" layoutX="409.0" layoutY="170.0" prefHeight="21.0" prefWidth="267.0" text="NIN (ID)" textFill="WHITE">
+      <Label fx:id="lblNIN" alignment="CENTER" disable="true" layoutX="409.0" layoutY="170.0" prefHeight="21.0" prefWidth="267.0" text="NIN (ID)" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="25.0" />
          </font>

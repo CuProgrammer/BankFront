@@ -46,6 +46,9 @@ public class SignUp {
     private TextField TxtGender;
 
     @FXML
+    public TextField TxtFirstName;
+
+    @FXML
     private TextField TxtLastName;
 
     @FXML
@@ -61,7 +64,7 @@ public class SignUp {
     private TextField TxtPostCode;
 
     @FXML
-    private TextField TxtUserName;
+    public TextField TxtUserName;
 
     @FXML
     private Button btnSignUp;
@@ -82,7 +85,7 @@ public class SignUp {
 
     @FXML
     void SignUp(ActionEvent event) throws IOException {
-        String name = TxtUserName.getText() + " " + TxtLastName.getText();
+        String name = TxtFirstName.getText() + " " + TxtLastName.getText();
         Gender gender = Gender.MALE; //Gender.valueOf(TxtGender.getText());
         LocalDate birthDate = LocalDate.of(Integer.parseInt(TxtBirthdayYear.getText()),
                                             Integer.parseInt(TxtBirthdayMonth.getText()),

@@ -27,7 +27,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField fx:id="TxtUserName" alignment="CENTER" layoutX="118.0" layoutY="27.0" prefHeight="31.0" prefWidth="184.0" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
+      <TextField fx:id="TxtFirstName" alignment="CENTER" layoutX="118.0" layoutY="27.0" prefHeight="31.0" prefWidth="184.0" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

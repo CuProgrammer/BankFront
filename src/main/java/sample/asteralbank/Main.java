@@ -25,6 +25,16 @@ public class Main implements Initializable {
     private Button Back;
 
     @FXML
+    public Label lblLastName;
+
+    @FXML
+    public Label lblNIN;
+
+    @FXML
+    public Label lblName;
+
+
+    @FXML
     private Button BtnAccountType;
 
     @FXML
@@ -77,7 +87,8 @@ public class Main implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
+        lblName.setText(DataRepository.user.getPerson().getName().split(" ")[0]);
+        lblLastName.setText(DataRepository.user.getPerson().getName().split(" ")[1]);
         String cardNumber = DataRepository.user.getUsername();
         lblNum1.setText(cardNumber.substring(0, 4));
         lblNum2.setText(cardNumber.substring(4, 8));
