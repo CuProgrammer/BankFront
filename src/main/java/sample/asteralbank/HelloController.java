@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart.Data;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -63,9 +64,9 @@ public class HelloController {
         String username = TxtUserName.getText();
         String password = Password.getText();
         System.out.println("REACHED HERE!");
-        INFO.user = INFO.userManager.login(username, password);
+        DataRepository.user = DataRepository.userManager.login(username, password);
         System.out.println("GOT USER!");
-        if (INFO.user == null) {
+        if (DataRepository.user == null) {
             lblEror.setText("WRONG USERNAME OR PASSWORD, GET RECKT LOSER");
             return;
         }

@@ -92,7 +92,7 @@ public class SignUp {
                                             Integer.parseInt(TxtBirthdayDay.getText()));
         Person person = new Person(name, gender, birthDate);
         String password = TxtPassword.getText();
-        INFO.userManager.addAccount(password, person, 100);
+        DataRepository.userManager.addAccount(password, person, 100);
         Stage stage =(Stage) btnSignUp.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
