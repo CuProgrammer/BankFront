@@ -1,5 +1,5 @@
 module sample.asteralbank {
-    requires javafx.controls;
+    requires transitive javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
 
@@ -11,7 +11,7 @@ module sample.asteralbank {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires com.fasterxml.jackson.databind;
-    requires Bank;
+    requires transitive Bank;
 
     opens sample.asteralbank to javafx.fxml;
     exports sample.asteralbank;
