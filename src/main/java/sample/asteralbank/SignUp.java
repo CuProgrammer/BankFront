@@ -81,8 +81,8 @@ public class SignUp {
 
     @FXML
     void SignUp(ActionEvent event) throws IOException {
-        String name = TxtUserName + " " + TxtLastName;
-        Gender gender = Gender.valueOf(TxtGender.getText());
+        String name = TxtUserName.getText() + " " + TxtLastName.getText();
+        Gender gender = Gender.MALE; //Gender.valueOf(TxtGender.getText());
         LocalDate birthDate = LocalDate.of(Integer.parseInt(TxtBirthdayYear.getText()),
                                             Integer.parseInt(TxtBirthdayMonth.getText()),
                                             Integer.parseInt(TxtBirthdayDay.getText()));
