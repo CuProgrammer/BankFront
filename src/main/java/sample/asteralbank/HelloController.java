@@ -63,11 +63,9 @@ public class HelloController {
 
         String username = TxtUserName.getText();
         String password = Password.getText();
-        System.out.println("REACHED HERE!");
         DataRepository.user = DataRepository.userManager.login(username, password);
-        System.out.println("GOT USER!");
         if (DataRepository.user == null) {
-            lblEror.setText("WRONG USERNAME OR PASSWORD, GET RECKT LOSER");
+            lblEror.setText("Wrong username or password");
             return;
         }
 
