@@ -60,7 +60,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="BtnCommunications" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BtnCommunications" onMouseEntered="#Resize1" onMouseExited="#Resize2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20;" styleClass="item" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="BtnAboutUs" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#BtnAboutUs" onMouseEntered="#Resize1" onMouseExited="#Resize2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20;" styleClass="item" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -110,7 +110,7 @@
                   <Font name="Freestyle Script" size="25.0" />
                </font>
             </Label>
-            <Label text="Communications" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <Label text="About Us" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Freestyle Script" size="25.0" />
                </font>
@@ -120,7 +120,7 @@
                   <Font name="Freestyle Script" size="25.0" />
                </font>
             </Label>
-            <Label text="Check" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <Label text="Cheque" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                <font>
                   <Font name="Freestyle Script" size="25.0" />
                </font>
@@ -140,9 +140,9 @@
                   <Image url="@Check.png" />
                </image>
             </ImageView>
-            <ImageView disable="true" fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <ImageView disable="true" fitHeight="48.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@Communications.png" />
+                  <Image url="@About%20Us.png" />
                </image>
             </ImageView>
             <ImageView disable="true" fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -239,7 +239,7 @@
             <Font name="Agency FB" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblNIN" alignment="CENTER" disable="true" layoutX="409.0" layoutY="170.0" prefHeight="21.0" prefWidth="267.0" text="NIN (ID)" textFill="WHITE">
+      <Label fx:id="lblInventory" alignment="CENTER" disable="true" layoutX="409.0" layoutY="170.0" prefHeight="21.0" prefWidth="267.0" text="5000 $" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="25.0" />
          </font>

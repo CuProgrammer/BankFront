@@ -32,6 +32,15 @@ class PersianNumberer {
         persianNumbers.put("هشت", 8.0);
         persianNumbers.put("نه", 9.0);
         persianNumbers.put("ده", 10.0);
+        persianNumbers.put("یازده",11.0);
+        persianNumbers.put("دوازده",12.0);
+        persianNumbers.put("سیزده",13.0);
+        persianNumbers.put("چهارده",14.0);
+        persianNumbers.put("پانزده",15.0);
+        persianNumbers.put("شانزده",16.0);
+        persianNumbers.put("هفده",17.0);
+        persianNumbers.put("هچده",18.0);
+        persianNumbers.put("نوزده",19.0);
         persianNumbers.put("بیست",20.0);
         persianNumbers.put("سی",30.0);
         persianNumbers.put("چهل",40.0);

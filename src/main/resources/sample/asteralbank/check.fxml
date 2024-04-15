@@ -13,7 +13,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="408.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.checkcontroller">
     <children>
-        <Label fx:id="lbltransfer" alignment="CENTER" layoutX="170.0" layoutY="13.0" text="cheque">
+        <Label fx:id="lbltransfer" alignment="CENTER" layoutX="178.0" layoutY="10.0" text="cheque">
             <font>
                 <Font name="Freestyle Script" size="32.0" />
             </font>
@@ -31,7 +31,7 @@
                 <Font name="Freestyle Script" size="22.0" />
             </font>
         </Button>
-      <AnchorPane fx:id="checkdata1" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="221.0" prefWidth="409.0" styleClass="transfer">
+      <AnchorPane fx:id="checkdata1" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="221.0" prefWidth="409.0" styleClass="jfx-tab-pane" stylesheets="@FirstCss.css">
          <children>
             <Label layoutX="256.0" layoutY="58.0" text="شماره حساب مقصد :">
                <font>
@@ -48,16 +48,16 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="year" alignment="CENTER" layoutX="55.0" layoutY="143.0" prefHeight="18.0" prefWidth="40.0" promptText="سال" />
-            <TextField fx:id="month" alignment="CENTER" layoutX="127.0" layoutY="144.0" prefHeight="18.0" prefWidth="40.0" promptText="ماه" />
-            <TextField fx:id="day" alignment="CENTER" layoutX="193.0" layoutY="145.0" prefHeight="18.0" prefWidth="40.0" promptText="روز" />
+            <TextField fx:id="year" alignment="CENTER" layoutX="55.0" layoutY="143.0" prefHeight="18.0" prefWidth="40.0" promptText="سال" styleClass="TT" stylesheets="@FirstCss.css" />
+            <TextField fx:id="month" alignment="CENTER" layoutX="127.0" layoutY="144.0" prefHeight="18.0" prefWidth="40.0" promptText="ماه" styleClass="TT" />
+            <TextField fx:id="day" alignment="CENTER" layoutX="193.0" layoutY="145.0" prefHeight="18.0" prefWidth="40.0" promptText="روز" styleClass="TT" stylesheets="@FirstCss.css" />
             <Line endX="100.0" layoutX="15.0" layoutY="147.0" startX="89.39726257324219" startY="19.7608642578125" />
             <Line endX="100.0" layoutX="89.0" layoutY="148.0" startX="89.39726257324219" startY="19.7608642578125" />
-            <TextField fx:id="checkamountDigit" alignment="CENTER_RIGHT" layoutX="9.0" layoutY="96.0" prefHeight="28.0" prefWidth="188.0" promptText="به حروف" />
-            <TextField fx:id="checkamountNum" alignment="CENTER_RIGHT" layoutX="205.0" layoutY="97.0" prefHeight="27.0" prefWidth="102.0" promptText="به رقم" />
-            <TextField fx:id="checkToNum1" layoutX="95.0" layoutY="55.0" />
-            <Button layoutX="184.0" layoutY="180.0" mnemonicParsing="false" onAction="#showcheck" text="ادامه" />
-            <TextField fx:id="checkid1" layoutX="95.0" layoutY="14.0" />
+            <TextField fx:id="checkamountDigit" alignment="CENTER_RIGHT" layoutX="9.0" layoutY="96.0" prefHeight="28.0" prefWidth="188.0" promptText="به حروف" styleClass="TT" />
+            <TextField fx:id="checkamountNum" alignment="CENTER_RIGHT" layoutX="205.0" layoutY="97.0" prefHeight="27.0" prefWidth="102.0" promptText="به رقم" styleClass="TT" />
+            <TextField fx:id="checkToNum1" layoutX="95.0" layoutY="55.0" styleClass="TT" />
+            <Button layoutX="184.0" layoutY="180.0" mnemonicParsing="false" onAction="#showcheck" styleClass="Button-Charge" text="ادامه" />
+            <TextField fx:id="checkid1" layoutX="95.0" layoutY="14.0" styleClass="TT" />
             <Label layoutX="271.0" layoutY="17.0" text="شماره صیادی چک:">
                <font>
                   <Font name="System Bold" size="14.0" />

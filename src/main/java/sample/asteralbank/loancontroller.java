@@ -100,7 +100,7 @@ public class loancontroller {
             showprice.setVisible(false);
             //registerform.setVisible(false);
             slider.setNode(slidelabel);
-            slider.setToX(187);
+            slider.setToX(192);
             slider.setDuration(Duration.millis(500));
             slider.setOnFinished((ActionEvent e) -> {
                 slidelabel.setVisible(true);
@@ -114,7 +114,7 @@ public class loancontroller {
             showprice.setVisible(false);
             //registerform.setVisible(false);
             slider.setNode(slidelabel);
-            slider.setToX(3);
+            slider.setToX(0);
             slider.setDuration(Duration.millis(500));
             slider.setOnFinished((ActionEvent e) -> {
                 slidelabel.setVisible(true);

@@ -1,6 +1,9 @@
 package sample.asteralbank;
 
+import com.blackbank.bank.Account;
+import javafx.animation.RotateTransition;
 import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,11 +31,9 @@ public class Main implements Initializable {
     public Label lblLastName;
 
     @FXML
-    public Label lblNIN;
-
+    private Label lblInventory;
     @FXML
     public Label lblName;
-
 
     @FXML
     private Button BtnAccountType;
@@ -50,7 +51,7 @@ public class Main implements Initializable {
     private Button BtnCart2;
 
     @FXML
-    private Button BtnCommunications;
+    private Button BtnAboutUs;
 
     @FXML
     private Button BtnInventory;
@@ -89,7 +90,9 @@ public class Main implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         lblName.setText(DataRepository.user.getPerson().getName().split(" ")[0]);
         lblLastName.setText(DataRepository.user.getPerson().getName().split(" ")[1]);
+        lblInventory.setText(((Account) DataRepository.user).getBalance() + "");
         String cardNumber = DataRepository.user.getUsername();
+
         lblNum1.setText(cardNumber.substring(0, 4));
         lblNum2.setText(cardNumber.substring(4, 8));
         lblNum3.setText(cardNumber.substring(8, 12));
@@ -110,7 +113,15 @@ public class Main implements Initializable {
     }
 
     @FXML
-    void BtnAccountType(ActionEvent event) {
+    void BtnAccountType(ActionEvent event) throws IOException {
+        Stage stage =(Stage) BtnBuyaninternet.getScene().getWindow();
+        stage.close();
+        Stage primaryStage=new Stage();
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("AccountType.fxml"));
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 
@@ -141,7 +152,7 @@ public class Main implements Initializable {
     }
 
     @FXML
-    void BtnCart1(ActionEvent event) {
+    public void BtnCart1(ActionEvent event) {
 
     }
 
@@ -151,7 +162,7 @@ public class Main implements Initializable {
     }
 
     @FXML
-    void BtnCommunications(ActionEvent event) {
+    void BtnAboutUs(ActionEvent event) {
 
     }
 
@@ -266,8 +277,8 @@ public class Main implements Initializable {
             st.setAutoReverse(true);
             st.play();
         }
-        else if (mouseEvent.getSource()==BtnCommunications){
-            st.setNode(BtnCommunications);
+        else if (mouseEvent.getSource()==BtnAboutUs){
+            st.setNode(BtnAboutUs);
             st.setToX(1.1);
             st.setToY(1.1);
             st.setCycleCount(1);
@@ -342,8 +353,8 @@ public class Main implements Initializable {
             st.setAutoReverse(true);
             st.play();
         }
-        else if (mouseEvent.getSource()==BtnCommunications){
-            st.setNode(BtnCommunications);
+        else if (mouseEvent.getSource()==BtnAboutUs){
+            st.setNode(BtnAboutUs);
             st.setToX(1);
             st.setToY(1);
             st.setCycleCount(1);

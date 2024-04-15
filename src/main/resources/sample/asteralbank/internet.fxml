@@ -30,24 +30,24 @@
                 <Font name="Freestyle Script" size="22.0" />
             </font>
         </Button>
-        <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="390.0" styleClass="transfer" AnchorPane.bottomAnchor="407.9304525601081" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000636888603" AnchorPane.topAnchor="128.0">
+        <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="390.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" styleClass="Button-Charge" AnchorPane.bottomAnchor="407.9304525601081" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000636888603" AnchorPane.topAnchor="128.0">
          <children>
-            <Button fx:id="switch_btn2" layoutX="29.0" layoutY="6.0" mnemonicParsing="false" onAction="#switch_forms" styleClass="button1" text="ماهانه">
+            <Button fx:id="switch_btn2" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#switch_forms" style="-fx-background-radius: 15; -fx-border-radius: 15;" styleClass="Button-Charge" text="ماهانه">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="switch_btn" layoutX="303.0" layoutY="6.0" mnemonicParsing="false" onAction="#switch_forms" styleClass="button1" text="روزانه">
+            <Button fx:id="switch_btn" layoutX="303.0" layoutY="6.0" mnemonicParsing="false" onAction="#switch_forms" style="-fx-background-radius: 15; -fx-border-radius: 15;" styleClass="Button-Charge" text="روزانه">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="switch_btn1" layoutX="165.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" styleClass="button1" text="هفتگی">
+            <Button fx:id="switch_btn1" layoutX="165.0" layoutY="6.0" mnemonicParsing="false" onAction="#switch_forms" style="-fx-background-radius: 15; -fx-border-radius: 15;" styleClass="Button-Charge" text="هفتگی">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Label fx:id="slidelabel" layoutX="14.0" layoutY="-1.0" prefHeight="45.0" prefWidth="109.0" styleClass="label3" visible="false" />
+            <Label fx:id="slidelabel" layoutX="14.0" layoutY="-1.0" prefHeight="45.0" prefWidth="99.0" styleClass="label3" visible="false" />
          </children>
         </AnchorPane>
       <Label layoutX="236.0" layoutY="99.0" text="نوع بسته انتخابی را مشخص کنید:" />

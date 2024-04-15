@@ -48,7 +48,7 @@ public class HelloController {
         stage.close();
         Stage primaryStage=new Stage();
         AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("SignUp.fxml"));
-        Scene scene = new Scene(root, 419, 629);
+        Scene scene = new Scene(root);
         stage.getIcons().add(new Image(HelloController.class.getResourceAsStream("logo.png")));
         stage.setResizable(false);
         primaryStage.setScene(scene);
@@ -76,7 +76,7 @@ public class HelloController {
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("Manager.fxml"));
         else if (DataRepository.userManager.getUserType(username).equals("account"))
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("Main.fxml"));
-        Scene scene = new Scene(root, 658 ,473);
+        Scene scene = new Scene(root);
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

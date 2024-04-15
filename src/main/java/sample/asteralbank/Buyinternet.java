@@ -1,5 +1,6 @@
 package sample.asteralbank;
 
+import com.blackbank.bank.Account;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +14,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
 
 public class Buyinternet {
@@ -25,11 +25,6 @@ public class Buyinternet {
 
     @FXML
     private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     public Label slidelabel;
@@ -70,7 +65,7 @@ public class Buyinternet {
 
             //registerform.setVisible(false);
             slider.setNode(slidelabel);
-            slider.setToX(260);
+            slider.setToX(265);
             slider.setDuration(Duration.millis(500));
             slider.setOnFinished((ActionEvent e) -> {
                 slidelabel.setVisible(true);
@@ -85,7 +80,7 @@ public class Buyinternet {
 
             //registerform.setVisible(false);
             slider.setNode(slidelabel);
-            slider.setToX(125);
+            slider.setToX(132);
             slider.setDuration(Duration.millis(500));
             slider.setOnFinished((ActionEvent e) -> {
                 slidelabel.setVisible(true);
@@ -100,7 +95,7 @@ public class Buyinternet {
         else if (event.getSource() == switch_btn2) {
             //rightform.setVisible(false);
             slider.setNode(slidelabel);
-            slider.setToX(-13);
+            slider.setToX(0);
             slider.setDuration(Duration.millis(500));
             slider.setOnFinished((ActionEvent e) -> {
                 slidelabel.setVisible(true);
@@ -195,6 +190,17 @@ public class Buyinternet {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Succesfully purchased!");
         alert.showAndWait();
+        Double amount = Double.parseDouble(dataprice.getText());
+        Account account = (Account) DataRepository.user;
+        if (account.getBalance() < amount){
+         Alert alert1 = new Alert(Alert.AlertType.ERROR);
+         alert1.setTitle("Errrr");
+         alert1.setContentText("ERRRRR");
+         alert1.showAndWait();
+         return;
+        }
+
+        account.setBalance(account.getBalance() - amount);
         Stage stage =(Stage) Back.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
