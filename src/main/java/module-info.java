@@ -10,9 +10,7 @@ module sample.asteralbank {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
-    requires com.fasterxml.jackson.datatype.jsr310;
     requires Bank;
 
     opens sample.asteralbank to javafx.fxml;
