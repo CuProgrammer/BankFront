@@ -73,8 +73,13 @@ public class BuyCharge1 {
         primaryStage.show();
     }
 
+
+    static double amount;
     @FXML
     void BtnNext(ActionEvent event) throws IOException {
+        String cashString = lblCash.getText();
+        amount = Double.parseDouble(cashString.substring(0, cashString.length()-1));
+        DataRepository.userManager.increaseBalance(DataRepository.user.getUsername(), -amount);
         Stage stage =(Stage) BtnNext.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
@@ -97,6 +102,35 @@ public class BuyCharge1 {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+    }
+    @FXML
+    void Btn1(ActionEvent event) {
+        lblCash.setText("1$");
+    }
+
+    @FXML
+    void Btn10(ActionEvent event) {
+        lblCash.setText("10$");
+    }
+
+    @FXML
+    void Btn2(ActionEvent event) {
+        lblCash.setText("2$");
+    }
+
+    @FXML
+    void Btn20(ActionEvent event) {
+        lblCash.setText("20$");
+    }
+
+    @FXML
+    void Btn5(ActionEvent event) {
+        lblCash.setText("5$");
+    }
+
+    @FXML
+    void Btn50(ActionEvent event) {
+        lblCash.setText("50$");
     }
 
 }

@@ -22,7 +22,7 @@
             <Font name="Agency FB" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblCash" alignment="CENTER" layoutX="128.0" layoutY="103.0" prefHeight="69.0" prefWidth="154.0" text="50 $">
+      <Label fx:id="lblCash1" alignment="CENTER" layoutX="128.0" layoutY="103.0" prefHeight="69.0" prefWidth="154.0" text="50 $">
          <font>
             <Font size="50.0" />
          </font>

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -54,6 +55,13 @@ public class BuyCharge {
 
     @FXML
     void Charge(ActionEvent event) throws IOException {
+
+        if(TxtPhoneNumber.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("please enter the phone number");
+            alert.showAndWait();
+        }
+        else{
         Stage stage =(Stage) BtnCharge.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
@@ -61,7 +69,7 @@ public class BuyCharge {
         Scene scene = new Scene(root, 409, 581);
         stage.setResizable(false);
         primaryStage.setScene(scene);
-        primaryStage.show();
+        primaryStage.show();}
 
 
     }

@@ -3,16 +3,20 @@ package sample.asteralbank;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class BuyCharge2 {
+public class BuyCharge2 implements Initializable {
 
     @FXML
     private Button Back;
@@ -33,7 +37,7 @@ public class BuyCharge2 {
     private Label lblBuyCharge;
 
     @FXML
-    private Label lblCash;
+    public Label lblCash1;
 
     @FXML
     private Label lblDate;
@@ -65,6 +69,12 @@ public class BuyCharge2 {
     @FXML
     private Label lblTime;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        lblCash1.setText(BuyCharge1.amount + "$");
+        lblIRNumber.setTextFill(Color.ANTIQUEWHITE);
+        lblIRNumber.setText(DataRepository.user.getUsername());
+    }
     @FXML
     void Back(ActionEvent event) throws IOException {
         Stage stage =(Stage) Back.getScene().getWindow();
