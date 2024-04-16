@@ -22,6 +22,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        MyLog.setPath("MY_LOG.txt");
         launch();
     }
 }

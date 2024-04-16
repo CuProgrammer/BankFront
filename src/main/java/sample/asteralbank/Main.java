@@ -109,6 +109,8 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("Logged out");
 
     }
 
@@ -122,6 +124,8 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("Account time button clicked");
 
     }
 
@@ -135,6 +139,8 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("buy internet button clicked");
 
     }
 
@@ -148,6 +154,9 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("buy charge button clicked");
+
 
     }
 
@@ -176,6 +185,9 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("inventory button clicked");
+
 
     }
 
@@ -189,7 +201,8 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("transfer button clicked");
     }
 
     @FXML

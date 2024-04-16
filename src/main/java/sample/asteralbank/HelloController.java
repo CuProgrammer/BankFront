@@ -80,7 +80,8 @@ public class HelloController {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-
+        MyLog.setUser(DataRepository.user);
+        MyLog.log("Logged in");
     }
 
 }
