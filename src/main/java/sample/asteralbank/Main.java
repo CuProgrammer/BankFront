@@ -117,7 +117,7 @@ public class Main implements Initializable {
         Stage stage =(Stage) BtnBuyaninternet.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
-        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("AccountType.fxml"));
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(""));
         Scene scene = new Scene(root);
         stage.setResizable(false);
         primaryStage.setScene(scene);

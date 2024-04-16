@@ -30,14 +30,14 @@
                 <Font name="Freestyle Script" size="22.0" />
             </font>
         </Button>
-        <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="390.0" styleClass="transfer" AnchorPane.bottomAnchor="407.9304525601081" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000636888603" AnchorPane.topAnchor="128.0">
+        <AnchorPane layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="390.0" styleClass="Button-ChargeM" AnchorPane.bottomAnchor="407.9304525601081" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000636888603" AnchorPane.topAnchor="128.0">
          <children>
-            <Button fx:id="switch_btn" layoutX="229.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" text="پرداخت قبوض تلفن">
+            <Button fx:id="switch_btn" layoutX="229.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" styleClass="Button-Charge" text="پرداخت قبوض تلفن">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="switch_btn1" layoutX="41.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" text="پرداخت با شناسه">
+            <Button fx:id="switch_btn1" layoutX="41.0" layoutY="7.0" mnemonicParsing="false" onAction="#switch_forms" styleClass="Button-Charge" text="پرداخت با شناسه">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -49,18 +49,18 @@
          <font>
             <Font name="System Bold" size="11.686956405639648" />
          </font></Label>
-      <AnchorPane fx:id="dayloan" layoutX="-1.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="transfer" visible="false">
+      <AnchorPane fx:id="dayloan" layoutX="-1.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="jfx-tab-pane" visible="false">
          <children>
-            <Button fx:id="BtnSabtShomareTelephone" layoutX="158.0" layoutY="157.0" mnemonicParsing="false" onAction="#BtnSabtShomareTelephone" text="ثبت شماره تلفن" />
+            <Button fx:id="BtnSabtShomareTelephone" layoutX="158.0" layoutY="157.0" mnemonicParsing="false" onAction="#BtnSabtShomareTelephone" styleClass="Button-Charge" text="ثبت شماره تلفن" />
             <Label layoutX="217.0" layoutY="28.0" text="لطفا شماره تلفن خود را وارد کنید  :">
                <font>
                   <Font name="System Bold" size="11.686956405639648" />
                </font>
             </Label>
-            <TextField fx:id="TxtPhoneNum" layoutX="130.0" layoutY="91.0" style="-fx-background-radius: 10;" styleClass="button" />
+            <TextField fx:id="TxtPhoneNum" layoutX="130.0" layoutY="91.0" style="-fx-background-radius: 10;" styleClass="TT" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="showprice" layoutX="-1.0" layoutY="394.0" prefHeight="142.0" prefWidth="409.0" visible="false">
+      <AnchorPane fx:id="showprice" layoutX="-1.0" layoutY="394.0" prefHeight="142.0" prefWidth="409.0" styleClass="tab-header-background" visible="false">
          <children>
             <Label layoutX="280.0" layoutY="14.0" text="اطلاعات قبض :" textFill="#b1b1b1">
                <font>
@@ -84,16 +84,16 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="weekloan" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="transfer" visible="false">
+      <AnchorPane fx:id="weekloan" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="207.0" prefWidth="409.0" styleClass="jfx-tab-pane" visible="false">
          <children>
-            <Button fx:id="Btnsabt" layoutX="193.0" layoutY="153.0" mnemonicParsing="false" onAction="#week2" text="ثبت" />
+            <Button fx:id="Btnsabt" layoutX="193.0" layoutY="153.0" mnemonicParsing="false" onAction="#week2" styleClass="Button-Charge" text="ثبت" />
             <Label fx:id="lblShenase" layoutX="211.0" layoutY="26.0" text="لطفا شناسه های قبض خود را وارد کنید  :">
                <font>
                   <Font name="System Bold" size="11.686956405639648" />
                </font>
             </Label>
-            <TextField fx:id="TxtShenasePardakht" alignment="TOP_RIGHT" layoutX="229.0" layoutY="79.0" promptText="شناسه پرداخت" />
-            <TextField fx:id="TxtShenaseGabz" alignment="TOP_RIGHT" layoutX="44.0" layoutY="79.0" promptText="شناسه قبض" />
+            <TextField fx:id="TxtShenasePardakht" alignment="TOP_RIGHT" layoutX="229.0" layoutY="79.0" promptText="شناسه پرداخت" style="-fx-background-radius: 10;" styleClass="TT" />
+            <TextField fx:id="TxtShenaseGabz" alignment="TOP_RIGHT" layoutX="44.0" layoutY="79.0" promptText="شناسه قبض" style="-fx-background-radius: 10;" styleClass="TT" />
          </children>
       </AnchorPane>
       <ImageView disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">

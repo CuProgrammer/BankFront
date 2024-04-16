@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="408.0" styleClass="TT" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.LoanRequest">
+   <children>
+      <Button fx:id="Back" layoutX="-26.0" layoutY="-29.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="54.0" style="-fx-background-radius: 20;" stylesheets="@FirstCss.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgBack1" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblChequeRequest" layoutX="163.0" layoutY="14.0" text="Loan Request">
+         <font>
+            <Font name="Freestyle Script" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="NUM1" layoutX="204.0" layoutY="117.0" text="1234123412341234">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="NUM2" layoutX="204.0" layoutY="235.0" text="1234123412341234">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="NUM3" layoutX="205.0" layoutY="345.0" text="1234123412341234">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="NUM4" layoutX="205.0" layoutY="459.0" text="1234123412341234">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtnOK1" layoutX="178.0" layoutY="196.0" mnemonicParsing="false" styleClass="Button-ChargeM" text="Button" />
+      <Button fx:id="BtnOK2" layoutX="177.0" layoutY="300.0" mnemonicParsing="false" styleClass="Button-ChargeM" text="Button" />
+      <Button fx:id="BtnOK3" layoutX="178.0" layoutY="417.0" mnemonicParsing="false" styleClass="Button-ChargeM" text="Button" />
+      <Button fx:id="BtnOK4" layoutX="177.0" layoutY="525.0" mnemonicParsing="false" styleClass="Button-ChargeM" text="Button" />
+      <Label fx:id="Loan1" layoutX="70.0" layoutY="119.0" text="50000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Loan2" layoutX="70.0" layoutY="238.0" text="50000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Loan3" layoutX="70.0" layoutY="348.0" text="50000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Loan4" layoutX="70.0" layoutY="464.0" text="50000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="BtnOK1" layoutX="-72.0" layoutY="183.0" text=". . . . . . . . . . . . . . . . . . . . . . . . . .">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="-72.0" layoutY="293.0" text=". . . . . . . . . . . . . . . . . . . . . . . . . .">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="-72.0" layoutY="407.0" text=". . . . . . . . . . . . . . . . . . . . . . . . . .">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="-72.0" layoutY="65.0" text=". . . . . . . . . . . . . . . . . . . . . . . . . .">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -71,7 +71,13 @@
     -fx-border-radius: 20;
     -fx-background-radius: 20;
 }
+.Button-ChargeM{
 
+    -fx-background-color:  #3c6e71;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: white;
+}
 
 
 

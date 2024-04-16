@@ -187,6 +187,7 @@ public class Buyinternet {
 
     @FXML
     void purchase(ActionEvent event) throws IOException {
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Succesfully purchased!");
         alert.showAndWait();
@@ -200,7 +201,8 @@ public class Buyinternet {
          return;
         }
 
-        account.setBalance(account.getBalance() - amount);
+        DataRepository.userManager.increaseBalance(account.getUsername(),-amount);
+
         Stage stage =(Stage) Back.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();

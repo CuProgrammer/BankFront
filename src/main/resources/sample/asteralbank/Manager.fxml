@@ -10,7 +10,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.Manager">
    <children>
       <TabPane fx:id="TabPane" prefHeight="473.0" prefWidth="658.0" stylesheets="@FirstCss.css" tabClosingPolicy="UNAVAILABLE">
@@ -63,7 +62,7 @@
             <Image url="@Exit.png" />
          </image>
       </ImageView>
-      <Button fx:id="Settings" layoutX="583.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Settings" prefHeight="60.0" prefWidth="30.0" style="-fx-background-radius: 5;" stylesheets="@FirstCss.css">
+      <Button fx:id="Settings" layoutX="584.0" layoutY="-29.0" mnemonicParsing="false" onAction="#Settings" prefHeight="60.0" prefWidth="30.0" style="-fx-background-radius: 5;" stylesheets="@FirstCss.css">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
