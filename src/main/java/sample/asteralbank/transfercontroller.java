@@ -183,7 +183,7 @@ public class transfercontroller {
             tranferredAmount = Double.parseDouble(Amount1.getText());
             recipient = (Account) DataRepository.userManager.getUser(recipientCardNumber);
             
-            if (recipient.getBalance() < tranferredAmount) {
+            if (((Account) DataRepository.user).getBalance() < tranferredAmount) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error");
                 alert.setHeaderText(null);

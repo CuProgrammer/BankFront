@@ -1,9 +1,11 @@
 package sample.asteralbank;
 
+import com.blackbank.bank.Account;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -77,8 +79,17 @@ public class BuyCharge1 {
     static double amount;
     @FXML
     void BtnNext(ActionEvent event) throws IOException {
+
         String cashString = lblCash.getText();
         amount = Double.parseDouble(cashString.substring(0, cashString.length()-1));
+
+        if (amount > ((Account) DataRepository.user).getBalance()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Not enough balance in your account!");
+            alert.showAndWait();
+            return;
+        }
         DataRepository.userManager.increaseBalance(DataRepository.user.getUsername(), -amount);
         Stage stage =(Stage) BtnNext.getScene().getWindow();
         stage.close();

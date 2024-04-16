@@ -40,6 +40,8 @@ public class BuyCharge {
     @FXML
     private Label lblpluse;
 
+    public static String phoneNumber;
+
     @FXML
     void Back(ActionEvent event) throws IOException {
         Stage stage =(Stage) Back.getScene().getWindow();
@@ -61,15 +63,16 @@ public class BuyCharge {
             alert.setContentText("please enter the phone number");
             alert.showAndWait();
         }
-        else{
-        Stage stage =(Stage) BtnCharge.getScene().getWindow();
-        stage.close();
-        Stage primaryStage=new Stage();
-        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("BuyCharge1.fxml"));
-        Scene scene = new Scene(root, 409, 581);
-        stage.setResizable(false);
-        primaryStage.setScene(scene);
-        primaryStage.show();}
+        else {
+            phoneNumber = TxtPhoneNumber.getText();
+            Stage stage =(Stage) BtnCharge.getScene().getWindow();
+            stage.close();
+            Stage primaryStage=new Stage();
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("BuyCharge1.fxml"));
+            Scene scene = new Scene(root, 409, 581);
+            stage.setResizable(false);
+            primaryStage.setScene(scene);
+            primaryStage.show();}
 
 
     }

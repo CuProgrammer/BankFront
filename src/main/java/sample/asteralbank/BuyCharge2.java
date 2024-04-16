@@ -74,6 +74,7 @@ public class BuyCharge2 implements Initializable {
         lblCash1.setText(BuyCharge1.amount + "$");
         lblIRNumber.setTextFill(Color.ANTIQUEWHITE);
         lblIRNumber.setText(DataRepository.user.getUsername());
+        lblPhoneNumber.setText(BuyCharge.phoneNumber);
     }
     @FXML
     void Back(ActionEvent event) throws IOException {
