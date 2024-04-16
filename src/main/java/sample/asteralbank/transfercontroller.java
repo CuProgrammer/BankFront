@@ -1,19 +1,27 @@
 package sample.asteralbank;
 
+import java.io.IOException;
+
+import com.blackbank.bank.Account;
+
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.chart.PieChart.Data;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
-import java.io.IOException;
 
 public class transfercontroller {
 
@@ -140,6 +148,8 @@ public class transfercontroller {
     }
 
 
+    double tranferredAmount = 0;
+
     @FXML
     void purchase(ActionEvent event) throws IOException {
         purchase.setText("Continue");
@@ -148,15 +158,43 @@ public class transfercontroller {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("تمامی فیلد ها را پر کنید!");
                 alert.showAndWait();
+                return;
             }
-            else {
-                Amount.setText(Amount1.getText());
-                Senderid.setText(Cardid.getText());
-                Transferinfo1.setVisible(false);
-                Transferinfo2.setVisible(true);
-                Transferinfo3.setVisible(false);
-                purchase.setText("Process");
+            String recipientCardNumber = Cardid.getText();
+            
+            if (!DataRepository.userManager.exists(recipientCardNumber) || 
+                !(DataRepository.userManager.getUser(recipientCardNumber) instanceof Account)) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Card number " + recipientCardNumber + " doesn't exist");
+                alert.showAndWait();
+                return;
             }
+
+            tranferredAmount = Double.parseDouble(Amount1.getText());
+            Account recipient = (Account) DataRepository.userManager.getUser(recipientCardNumber);
+            
+            if (recipient.getBalance() < tranferredAmount) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText(null);
+                alert.setContentText("Not enough balance in your account");
+                alert.showAndWait();
+                return;
+            }
+
+            Amount.setText(Amount1.getText());
+            Recieverid.setText(Cardid.getText());
+            ReciverName.setText(recipient.getPerson().getName());
+            Senderid.setText(DataRepository.user.getUsername());
+            SenderName.setText(DataRepository.user.getPerson().getName());
+            Transferinfo1.setVisible(false);
+            Transferinfo2.setVisible(true);
+            Transferinfo3.setVisible(false);
+            purchase.setText("Process");
+            DataRepository.userManager.increaseBalance(recipientCardNumber, tranferredAmount);
+            DataRepository.userManager.increaseBalance(DataRepository.user.getUsername(), -tranferredAmount);
         }
 
         else if(Transferinfo2.isVisible()) {
