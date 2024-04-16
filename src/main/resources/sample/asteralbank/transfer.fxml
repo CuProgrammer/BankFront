@@ -96,9 +96,12 @@
                   <Image url="@fotor-20240415222920.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="185.0" layoutY="256.0" prefHeight="28.0" prefWidth="119.0" text="Label" />
-            <Label layoutX="34.0" layoutY="256.0" prefHeight="28.0" prefWidth="119.0" text="Label" />
-            <Label layoutX="83.0" layoutY="333.0" prefHeight="32.0" prefWidth="165.0" text="Label" />
+            <Label fx:id="SenderName2" alignment="CENTER" layoutX="185.0" layoutY="256.0" prefHeight="28.0" prefWidth="119.0" text="Label" />
+            <Label fx:id="RecieverName2" alignment="CENTER" layoutX="34.0" layoutY="256.0" prefHeight="28.0" prefWidth="119.0" text="Label" />
+            <Label fx:id="Amount2" alignment="CENTER" layoutX="83.0" layoutY="333.0" prefHeight="32.0" prefWidth="165.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
          </children>
       </AnchorPane>
     </children>

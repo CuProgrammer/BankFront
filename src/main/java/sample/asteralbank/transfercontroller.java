@@ -80,7 +80,14 @@ public class transfercontroller {
     @FXML
     private AnchorPane weekloan;
 
+    @FXML
+    private Label RecieverName2;
 
+    @FXML
+    private Label SenderName2;
+
+    @FXML
+    private Label Amount2;
     @FXML
     private Label slidelabel;
 
