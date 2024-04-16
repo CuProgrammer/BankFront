@@ -156,6 +156,7 @@ public class transfercontroller {
 
 
     double tranferredAmount = 0;
+    Account recipient = null;
 
     @FXML
     void purchase(ActionEvent event) throws IOException {
@@ -180,7 +181,7 @@ public class transfercontroller {
             }
 
             tranferredAmount = Double.parseDouble(Amount1.getText());
-            Account recipient = (Account) DataRepository.userManager.getUser(recipientCardNumber);
+            recipient = (Account) DataRepository.userManager.getUser(recipientCardNumber);
             
             if (recipient.getBalance() < tranferredAmount) {
                 Alert alert = new Alert(AlertType.ERROR);
@@ -212,6 +213,9 @@ public class transfercontroller {
             Transferinfo2.setVisible(false);
             Transferinfo3.setVisible(true);
             purchase.setText("Return Home");
+            SenderName2.setText(DataRepository.user.getPerson().getName());
+            RecieverName2.setText(recipient.getPerson().getName());
+            Amount2.setText(tranferredAmount + "");
         }
         else if(Transferinfo3.isVisible()){
             Stage stage=new Stage();
