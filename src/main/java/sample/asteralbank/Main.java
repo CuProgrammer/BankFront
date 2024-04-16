@@ -184,8 +184,8 @@ public class Main implements Initializable {
         Stage stage =(Stage) BtnMoneytransfer.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
-        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Transfer.fxml"));
-        Scene scene = new Scene(root, 409, 581);
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("transfer.fxml"));
+        Scene scene = new Scene(root);
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

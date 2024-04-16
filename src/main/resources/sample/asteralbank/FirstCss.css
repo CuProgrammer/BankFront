@@ -140,10 +140,10 @@
 
 }
 .label1{
-    -fx-text-fill: #500000;
-    -fx-background-color: #bd8686;
-    -fx-background-radius: 5px ;
-    -fx-opacity: 80%;
+    -fx-opacity: 10%;
+    -fx-background-color: #181818;
+    color: white;
+    -fx-background-radius: 10px;
 }
 .label2{
     -fx-opacity: 10%;

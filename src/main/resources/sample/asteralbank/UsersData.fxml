@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CharmListView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="408.0" styleClass="TT" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.UsersData">
+   <children>
+      <Button fx:id="Back" layoutX="-26.0" layoutY="-29.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="54.0" style="-fx-background-radius: 20;" stylesheets="@FirstCss.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="imgBack1" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblChequeRequest" layoutX="166.0" layoutY="14.0" text="Users Data">
+         <font>
+            <Font name="Freestyle Script" size="25.0" />
+         </font>
+      </Label>
+      <CharmListView fx:id="LstUsersData" layoutY="91.0" prefHeight="221.0" prefWidth="408.0" />
+      <TextField fx:id="TxtEnteruserCardNumber" alignment="TOP_LEFT" layoutX="110.0" layoutY="352.0" prefHeight="26.0" prefWidth="191.0" promptText="Enter user Card Number" styleClass="card1" stylesheets="@FirstCss.css" />
+      <Button fx:id="BtnDeleteUser" layoutX="162.0" layoutY="408.0" mnemonicParsing="false" onAction="#BtnDeleteUser" styleClass="Button-Charge" text="Delete User" />
+      <Button fx:id="BtnDeactiveuseraccount" layoutX="130.0" layoutY="459.0" mnemonicParsing="false" onAction="#BtnDeactiveuseraccount" styleClass="Button-Charge" text="Deactive user account" />
+      <Button fx:id="BtnActiveuseraccount" layoutX="139.0" layoutY="509.0" mnemonicParsing="false" onAction="#BtnActiveuseraccount" styleClass="Button-Charge" text="Active user account" />
+   </children>
+</AnchorPane>
