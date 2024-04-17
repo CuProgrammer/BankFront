@@ -111,7 +111,8 @@ public class Main implements Initializable {
         primaryStage.show();
         MyLog.setUser(DataRepository.user);
         MyLog.log("Logged out");
-
+        MyLog.setUser(null);
+        DataRepository.user = null;
     }
 
     @FXML
@@ -125,7 +126,7 @@ public class Main implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
         MyLog.setUser(DataRepository.user);
-        MyLog.log("Account time button clicked");
+        MyLog.log("Account type button clicked");
 
     }
 
@@ -156,6 +157,7 @@ public class Main implements Initializable {
         primaryStage.show();
         MyLog.setUser(DataRepository.user);
         MyLog.log("buy charge button clicked");
+        MyLog.log("User clicked on Buying charge btn");
 
 
     }
@@ -180,6 +182,7 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User clicked on About us btn");
 
     }
 
@@ -195,6 +198,7 @@ public class Main implements Initializable {
         primaryStage.show();
         MyLog.setUser(DataRepository.user);
         MyLog.log("inventory button clicked");
+        MyLog.log("User clicked on Loan btn");
 
 
     }
@@ -211,6 +215,7 @@ public class Main implements Initializable {
         primaryStage.show();
         MyLog.setUser(DataRepository.user);
         MyLog.log("transfer button clicked");
+        MyLog.log("User clicked on Money Transfer btn");
     }
 
     @FXML
@@ -223,6 +228,7 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User clicked on Paying bills btn");
 
     }
 
@@ -236,6 +242,7 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User clicked on Turn over btn");
 
 
     }
@@ -250,6 +257,7 @@ public class Main implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User clicked on check btn");
 
     }
 

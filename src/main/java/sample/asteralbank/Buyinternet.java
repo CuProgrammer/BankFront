@@ -198,7 +198,9 @@ public class Buyinternet {
          alert1.setTitle("Errrr");
          alert1.setContentText("ERRRRR");
          alert1.showAndWait();
+         MyLog.log("User bought internet");
          return;
+         
         }
 
         DataRepository.userManager.increaseBalance(account.getUsername(),-amount);

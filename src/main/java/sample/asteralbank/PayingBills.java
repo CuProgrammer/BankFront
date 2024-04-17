@@ -82,6 +82,7 @@ public class PayingBills {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User retuned to main page");
     }
 
     @FXML
@@ -95,6 +96,7 @@ public class PayingBills {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("پرداخت قبض موفقیت آمیز بود");
         alert.showAndWait();
+        MyLog.log("bought internet");
         Stage stage=new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

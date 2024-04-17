@@ -31,6 +31,7 @@ public class TurnOver {
     void Back(ActionEvent event) throws IOException {
         Stage stage =(Stage) Back.getScene().getWindow();
         stage.close();
+        MyLog.log("User saw its turnover");
         Stage primaryStage=new Stage();
         AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root, 727, 592);

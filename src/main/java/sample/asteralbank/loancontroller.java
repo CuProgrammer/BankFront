@@ -79,6 +79,7 @@ public class loancontroller {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("اطلاعات وام درخواستی شما به کارشناس مربوطه جهت برسی ارجاع شد !");
         alert.showAndWait();
+        MyLog.log("Loan request sent to admin");
 
 
         Loan loan = new Loan(DataRepository.user, Double.parseDouble(amount.getText()), false);
@@ -106,6 +107,7 @@ public class loancontroller {
                 slidelabel.setVisible(true);
                 dayloan.setVisible(true);
                 weekloan.setVisible(false);
+                MyLog.log("User clicked on 1st loan btn");
 
 
             });
@@ -120,6 +122,7 @@ public class loancontroller {
                 slidelabel.setVisible(true);
                 dayloan.setVisible(false);
                 weekloan.setVisible(true);
+                MyLog.log("User clicked on 2nd loan btn");
 
 
             });
@@ -153,6 +156,7 @@ public class loancontroller {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User returned to main page");
 
     }
 

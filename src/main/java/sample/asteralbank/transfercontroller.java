@@ -132,6 +132,8 @@ public class transfercontroller {
             Transferinfo2.setVisible(true);
             Transferinfo3.setVisible(false);
             purchase.setText("Process");
+            MyLog.log("User returned to 2nd transfer page");
+            
         }
 
         else if(Transferinfo2.isVisible()) {
@@ -141,6 +143,7 @@ public class transfercontroller {
             Transferinfo2.setVisible(false);
             Transferinfo3.setVisible(false);
             purchase.setText("Continue");
+            MyLog.log("User returned to 1st transfer page");
         }
         else if (Transferinfo1.isVisible()){
             Stage stage2 =(Stage) Back.getScene().getWindow();
@@ -151,6 +154,7 @@ public class transfercontroller {
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
+            MyLog.log("User returned to main page");
 
         }
 
@@ -168,6 +172,7 @@ public class transfercontroller {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("تمامی فیلد ها را پر کنید!");
                 alert.showAndWait();
+                MyLog.log("Transfer declined because of empty fields");
                 return;
             }
             String recipientCardNumber = Cardid.getText();
@@ -179,7 +184,9 @@ public class transfercontroller {
                 alert.setHeaderText(null);
                 alert.setContentText("Card number " + recipientCardNumber + " doesn't exist");
                 alert.showAndWait();
+                MyLog.log("Transfer declined because User not exist");
                 return;
+                
             }
 
             tranferredAmount = Double.parseDouble(Amount1.getText());
@@ -191,6 +198,7 @@ public class transfercontroller {
                 alert.setHeaderText(null);
                 alert.setContentText("Not enough balance in your account");
                 alert.showAndWait();
+                MyLog.log("Transfer declined because of low balance");
                 return;
             }
 
@@ -218,6 +226,7 @@ public class transfercontroller {
             SenderName2.setText(DataRepository.user.getPerson().getName());
             RecieverName2.setText(recipient.getPerson().getName());
             Amount2.setText(tranferredAmount + "");
+            MyLog.log("Transfer to " + recipient.getUsername() + " " + recipient.getPerson().getName()+" accpeted");
         }
         else if(Transferinfo3.isVisible()){
             Stage stage1 =(Stage) Back.getScene().getWindow();
@@ -228,6 +237,8 @@ public class transfercontroller {
             stage.setTitle("");
             stage.setScene(scene);
             stage.show();
+            MyLog.log("User returned to main page");
+        
 
         }
 

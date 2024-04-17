@@ -52,6 +52,7 @@ public class BuyCharge {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User returned to main page");
 
     }
 
@@ -62,6 +63,7 @@ public class BuyCharge {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("please enter the phone number");
             alert.showAndWait();
+            MyLog.log("buying charge empty phonenum error");
         }
         else {
             phoneNumber = TxtPhoneNumber.getText();
@@ -73,6 +75,7 @@ public class BuyCharge {
             stage.setResizable(false);
             primaryStage.setScene(scene);
             primaryStage.show();}
+            MyLog.log("User phonenum : "+phoneNumber +" recieved for buying charge");
 
 
     }

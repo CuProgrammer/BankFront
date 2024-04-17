@@ -73,6 +73,7 @@ public class BuyCharge1 {
         Scene scene = new Scene(root, 409, 581);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User retuned to main page");
     }
 
 
@@ -88,9 +89,12 @@ public class BuyCharge1 {
             alert.setHeaderText(null);
             alert.setContentText("Not enough balance in your account!");
             alert.showAndWait();
+            MyLog.log("User doesnt have balance to buy charge");
             return;
+            
         }
         DataRepository.userManager.increaseBalance(DataRepository.user.getUsername(), -amount);
+        MyLog.log("User bought charge");
         Stage stage =(Stage) BtnNext.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
@@ -112,6 +116,7 @@ public class BuyCharge1 {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User returned to main page");
 
     }
     @FXML

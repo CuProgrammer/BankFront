@@ -85,6 +85,7 @@ public class BuyCharge2 implements Initializable {
         Scene scene = new Scene(root, 409, 581);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User retuned");
 
     }
 
@@ -98,6 +99,8 @@ public class BuyCharge2 implements Initializable {
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        MyLog.log("User doesnt have balance to buy charge");
+        MyLog.log("User returned to main page");
 
 
     }
