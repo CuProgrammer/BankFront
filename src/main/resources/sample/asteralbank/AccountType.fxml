@@ -32,7 +32,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblAccountType" layoutX="179.0" layoutY="128.0" text="Label">
+            <Label fx:id="lblAccountType" layoutX="172.0" layoutY="127.0" text="Saving">
                <font>
                   <Font size="22.0" />
                </font>

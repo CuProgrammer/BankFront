@@ -157,24 +157,19 @@
          </image>
       </ImageView>
       <PasswordField fx:id="TxtPassword" alignment="CENTER" layoutX="118.0" layoutY="480.0" prefHeight="31.0" prefWidth="184.0" promptText="Password" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #284b63;" />
-      <Label fx:id="lblEror" alignment="CENTER" layoutX="28.0" layoutY="-2.0" prefHeight="32.0" prefWidth="373.0" text="wellcome to Asral bank" textFill="RED">
-         <font>
-            <Font name="Lucida Fax Regular" size="15.0" />
-         </font>
-      </Label>
       <SplitMenuButton alignment="CENTER" layoutX="118.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" stylesheets="@FirstCss.css" text="Type Account">
         <items>
-          <MenuItem mnemonicParsing="false" text="Saving" />
-          <MenuItem mnemonicParsing="false" text="Loan" />
+          <MenuItem fx:id="MenulitemSaving" mnemonicParsing="false" onAction="#MenulitemSaving" text="Saving" />
+          <MenuItem fx:id="MenulitemLoan" mnemonicParsing="false" onAction="#MenulitemLoan" text="Loan" />
         </items>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </SplitMenuButton>
-      <SplitMenuButton alignment="CENTER" layoutX="118.0" layoutY="180.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" text="Gender">
+      <SplitMenuButton fx:id="splitGender" alignment="CENTER" layoutX="118.0" layoutY="180.0" mnemonicParsing="false" onAction="#splitGender" prefHeight="25.0" prefWidth="184.0" text="Gender">
         <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
+          <MenuItem fx:id="MenultemMale" mnemonicParsing="false" onAction="#MenultemMale" text="Male" />
+          <MenuItem fx:id="MenultemFemale" mnemonicParsing="false" onAction="#MenultemFemale" text="Female" />
         </items>
          <cursor>
             <Cursor fx:constant="HAND" />

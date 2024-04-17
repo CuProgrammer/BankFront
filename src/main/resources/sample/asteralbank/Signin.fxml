@@ -69,10 +69,5 @@
             <Image url="@Password.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblEror" alignment="CENTER" layoutX="6.0" layoutY="14.0" prefHeight="32.0" prefWidth="373.0" text="wellcome to Asral bank" textFill="RED">
-         <font>
-            <Font name="Lucida Fax Regular" size="15.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

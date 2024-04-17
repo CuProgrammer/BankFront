@@ -1,7 +1,9 @@
 package sample.asteralbank;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 import com.blackbank.bank.Gender;
 import com.blackbank.bank.Person;
@@ -9,19 +11,29 @@ import com.blackbank.bank.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class SignUp {
+public class SignUp implements Initializable  {
 
     @FXML
-    private RadioButton RadioSaving;
+    private MenuItem MenulitemLoan;
 
     @FXML
-    private RadioButton RadioShort;
+    private MenuItem MenulitemSaving;
+
+    @FXML
+    private MenuItem MenultemFemale;
+
+    @FXML
+    private MenuItem MenultemMale;
+
+    @FXML
+    private SplitMenuButton splitGender;
 
     @FXML
     private Button Back;
@@ -68,6 +80,10 @@ public class SignUp {
     @FXML
     private Button btnSignUp;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
     @FXML
     void Back(ActionEvent event) throws IOException {
         Stage stage =(Stage) Back.getScene().getWindow();
@@ -81,11 +97,35 @@ public class SignUp {
         primaryStage.show();
 
     }
+    @FXML
+    void MenulitemLoan(ActionEvent event) {
+
+    }
+
+    @FXML
+    void MenulitemSaving(ActionEvent event) {
+
+    }
+
+
+    Gender gender;
+    @FXML
+    void MenultemFemale(ActionEvent event) {
+        gender = Gender.FEMALE;
+    }
+
+    @FXML
+    void MenultemMale(ActionEvent event) {
+        gender = Gender.MALE;
+    }
+    @FXML
+    void splitGender(ActionEvent event) {
+    }
 
     @FXML
     void SignUp(ActionEvent event) throws IOException {
         String name = TxtFirstName.getText() + " " + TxtLastName.getText();
-        Gender gender = Gender.MALE; //Gender.valueOf(TxtGender.getText());
+        Gender gender = this.gender; //Gender.valueOf(TxtGender.getText());
         LocalDate birthDate = LocalDate.of(Integer.parseInt(TxtBirthdayYear.getText()),
                                             Integer.parseInt(TxtBirthdayMonth.getText()),
                                             Integer.parseInt(TxtBirthdayDay.getText()));
