@@ -102,13 +102,12 @@ public class SignUp {
         Stage stage =(Stage) btnSignUp.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
+        stage.getIcons().add(new Image(HelloController.class.getResourceAsStream("Icon.jpg")));
         AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root, 727, 592);
-        stage.getIcons().add(new Image(HelloController.class.getResourceAsStream("Icon.jpg")));
         stage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-
 
 
     }

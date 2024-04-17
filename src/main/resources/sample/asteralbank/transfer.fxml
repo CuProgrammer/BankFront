@@ -18,7 +18,7 @@
             </font>
         </Label>
         <ListView fx:id="listTransfer" layoutX="-5.0" layoutY="75.0" prefHeight="462.0" prefWidth="417.0" style="-fx-background-radius: 0;" styleClass="card1" />
-        <Button fx:id="Back" layoutX="-24.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="54.0" style="-fx-background-radius: 5;" stylesheets="@FirstCss.css">
+        <Button fx:id="Back" layoutX="-24.0" layoutY="-30.0" mnemonicParsing="false" onAction="#Back" prefHeight="60.0" prefWidth="54.0" style="-fx-background-radius: 20;" stylesheets="@FirstCss.css">
             <cursor>
                 <Cursor fx:constant="HAND" />
             </cursor>
@@ -39,7 +39,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="Transferinfo1" layoutX="3.0" layoutY="117.0" prefHeight="189.0" prefWidth="403.0" styleClass="transfer">
+      <AnchorPane fx:id="Transferinfo1" layoutY="117.0" prefHeight="189.0" prefWidth="409.0" styleClass="jfx-tab-pane">
          <children>
             <Label layoutX="220.0" layoutY="14.0" text="شماره حساب مقصد را وارد کنید :">
                <font>
@@ -51,8 +51,8 @@
                   <Font name="System Bold" size="11.686956405639648" />
                </font>
             </Label>
-            <TextField fx:id="Cardid" layoutX="103.0" layoutY="45.0" prefHeight="27.0" prefWidth="195.0" />
-            <TextField fx:id="Amount1" layoutX="103.0" layoutY="124.0" prefHeight="27.0" prefWidth="195.0" />
+            <TextField fx:id="Cardid" layoutX="103.0" layoutY="45.0" prefHeight="27.0" prefWidth="195.0" styleClass="TT" />
+            <TextField fx:id="Amount1" layoutX="103.0" layoutY="124.0" prefHeight="27.0" prefWidth="195.0" styleClass="TT" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="Transferinfo2" layoutX="50.0" layoutY="74.0" prefHeight="293.0" prefWidth="306.0" visible="false">
@@ -65,7 +65,7 @@
             <Label fx:id="SenderName" layoutX="233.0" layoutY="144.0" text="Label" />
             <Label fx:id="ReciverName" layoutX="64.0" layoutY="145.0" text="Label" />
             <Label fx:id="Recieverid" layoutX="64.0" layoutY="202.0" text="Label" />
-            <Label fx:id="Senderid" layoutX="233.0" layoutY="202.0" text="Label" />
+            <Label fx:id="Senderid" layoutX="219.0" layoutY="202.0" text="Label" />
             <Label fx:id="Amount" layoutX="75.0" layoutY="267.0" prefHeight="28.0" prefWidth="141.0" text="Label" />
             <ImageView fitHeight="60.0" fitWidth="54.0" layoutX="220.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -104,5 +104,10 @@
                </font></Label>
          </children>
       </AnchorPane>
+      <ImageView fx:id="imgBack1" disable="true" fitHeight="31.0" fitWidth="27.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back2.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

@@ -15,8 +15,6 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.BuyCharge1">
    <children>
       <ListView fx:id="listTransfer" layoutX="-1.0" layoutY="79.0" prefHeight="502.0" prefWidth="410.0" style="-fx-background-radius: 0;" styleClass="card1" />
-      <AnchorPane layoutX="-189.0" layoutY="107.0" prefHeight="65.0" prefWidth="753.0" style="-fx-background-color: #d9d9d9;" />
-      <AnchorPane layoutX="205.0" layoutY="74.0" prefHeight="621.0" prefWidth="65.0" rotate="39.8" style="-fx-background-color: white;" />
       <Label layoutX="-35.0" layoutY="172.0" text=". . . . . . . . . . . . . . . . . . . .">
          <font>
             <Font size="50.0" />
@@ -53,7 +51,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="Btn5" mnemonicParsing="false" onAction="#Btn5" prefHeight="50.0" prefWidth="100.0" text="5 $" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="Btn5" mnemonicParsing="false" onAction="#Btn5" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="5 $" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -61,7 +59,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="Btn2" mnemonicParsing="false" onAction="#Btn2" prefHeight="50.0" prefWidth="100.0" text="2 $" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="Btn2" mnemonicParsing="false" onAction="#Btn2" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="2 $" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -69,7 +67,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="Btn1" mnemonicParsing="false" onAction="#Btn1" prefHeight="50.0" prefWidth="100.0" text="1 $" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="Btn1" mnemonicParsing="false" onAction="#Btn1" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="1 $" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -77,7 +75,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="Btn10" mnemonicParsing="false" onAction="#Btn10" prefHeight="50.0" prefWidth="100.0" text="10 $" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="Btn10" mnemonicParsing="false" onAction="#Btn10" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="10 $" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -85,7 +83,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="Btn50" mnemonicParsing="false" onAction="#Btn50" prefHeight="50.0" prefWidth="100.0" text="50 $" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="Btn50" mnemonicParsing="false" onAction="#Btn50" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="50 $" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -93,7 +91,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="Btn20" mnemonicParsing="false" onAction="#Btn20" prefHeight="50.0" prefWidth="100.0" text="20 $" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button fx:id="Btn20" mnemonicParsing="false" onAction="#Btn20" prefHeight="50.0" prefWidth="100.0" styleClass="Button-Charge" text="20 $" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -103,17 +101,12 @@
             </Button>
          </children>
       </GridPane>
-      <Label fx:id="lblBuyCharge" layoutX="169.0" layoutY="31.0" text="Buy charge" textFill="WHITE">
+      <Label fx:id="lblBuyCharge" layoutX="167.0" layoutY="15.0" text="Buy charge" textFill="WHITE">
          <font>
             <Font name="Freestyle Script" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="lblEror" alignment="CENTER" layoutX="66.0" layoutY="-1.0" prefHeight="32.0" prefWidth="343.0" style="-fx-background-color: blue;" text="wellcome to Asral bank" textFill="RED">
-         <font>
-            <Font name="Lucida Fax Regular" size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblChargeAndTax" layoutX="127.0" layoutY="172.0" prefHeight="25.0" prefWidth="160.0" text="Charge amount + tax" textFill="WHITE">
+      <Label fx:id="lblChargeAndTax" layoutX="144.0" layoutY="172.0" prefHeight="25.0" prefWidth="121.0" text="Charge amount" textFill="WHITE">
          <font>
             <Font name="Candara Light" size="18.0" />
          </font>

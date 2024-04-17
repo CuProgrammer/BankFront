@@ -27,7 +27,7 @@
             <Font name="Freestyle Script" size="25.0" />
          </font>
       </Label>
-      <CharmListView fx:id="LstUsersData" layoutY="91.0" prefHeight="221.0" prefWidth="408.0" />
+      <CharmListView fx:id="LstUsersData" layoutY="91.0" prefHeight="221.0" prefWidth="408.0" styleClass="TT" stylesheets="@FirstCss.css" />
       <TextField fx:id="TxtEnteruserCardNumber" alignment="TOP_LEFT" layoutX="110.0" layoutY="352.0" prefHeight="26.0" prefWidth="191.0" promptText="Enter user Card Number" styleClass="card1" stylesheets="@FirstCss.css" />
       <Button fx:id="BtnDeleteUser" layoutX="162.0" layoutY="408.0" mnemonicParsing="false" onAction="#BtnDeleteUser" styleClass="Button-Charge" text="Delete User" />
       <Button fx:id="BtnDeactiveuseraccount" layoutX="130.0" layoutY="459.0" mnemonicParsing="false" onAction="#BtnDeactiveuseraccount" styleClass="Button-Charge" text="Deactive user account" />

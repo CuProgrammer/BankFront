@@ -143,6 +143,8 @@ public class transfercontroller {
             purchase.setText("Continue");
         }
         else if (Transferinfo1.isVisible()){
+            Stage stage2 =(Stage) Back.getScene().getWindow();
+            stage2.close();
             Stage stage=new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Main.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
@@ -218,10 +220,12 @@ public class transfercontroller {
             Amount2.setText(tranferredAmount + "");
         }
         else if(Transferinfo3.isVisible()){
+            Stage stage1 =(Stage) Back.getScene().getWindow();
+            stage1.close();
             Stage stage=new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Main.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            stage.setTitle("Hello!");
+            stage.setTitle("");
             stage.setScene(scene);
             stage.show();
 
