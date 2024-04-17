@@ -79,7 +79,7 @@ public class HelloController {
         Stage primaryStage=new Stage();
         AnchorPane root = null;
         if (DataRepository.userManager.getUserType(username).equals("admin"))
-            root = (AnchorPane) FXMLLoader.load(getClass().getResource("Manager.fxml"));
+            root = (AnchorPane) FXMLLoader.load(getClass().getResource("Admin.fxml"));
         else if (DataRepository.userManager.getUserType(username).equals("account"))
             root = (AnchorPane) FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene scene = new Scene(root);
