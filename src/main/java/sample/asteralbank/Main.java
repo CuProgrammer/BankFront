@@ -116,10 +116,10 @@ public class Main implements Initializable {
 
     @FXML
     void BtnAccountType(ActionEvent event) throws IOException {
-        Stage stage =(Stage) BtnBuyaninternet.getScene().getWindow();
+        Stage stage =(Stage) BtnAccountType.getScene().getWindow();
         stage.close();
         Stage primaryStage=new Stage();
-        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(""));
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("AccountType.fxml"));
         Scene scene = new Scene(root);
         stage.setResizable(false);
         primaryStage.setScene(scene);
@@ -171,7 +171,15 @@ public class Main implements Initializable {
     }
 
     @FXML
-    void BtnAboutUs(ActionEvent event) {
+    void BtnAboutUs(ActionEvent event) throws IOException {
+        Stage stage =(Stage) BtnAccountType.getScene().getWindow();
+        stage.close();
+        Stage primaryStage=new Stage();
+        AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 

@@ -15,8 +15,6 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.BuyCharge2">
    <children>
       <ListView fx:id="listTransfer" layoutX="-1.0" layoutY="79.0" prefHeight="502.0" prefWidth="410.0" style="-fx-background-radius: 0;" styleClass="card1" />
-      <AnchorPane layoutX="-189.0" layoutY="107.0" prefHeight="65.0" prefWidth="753.0" style="-fx-background-color: #d9d9d9;" />
-      <AnchorPane layoutX="205.0" layoutY="74.0" prefHeight="621.0" prefWidth="65.0" rotate="39.8" style="-fx-background-color: white;" />
       <Label fx:id="lblPhoneNumber" layoutX="147.0" layoutY="178.0" text="Phone Number" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="25.0" />
@@ -48,22 +46,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="lblTime" text="Time">
+            <Label fx:id="lblTime" text="Time" textFill="WHITE">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblReferenceNo" text="Reference No" GridPane.rowIndex="3">
+            <Label fx:id="lblReferenceNo" text="Reference No" textFill="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblIssueTracking" text="Issue Tracking" GridPane.rowIndex="2">
+            <Label fx:id="lblIssueTracking" text="Issue Tracking" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblPaymentFromTheAccount" text="Payment from the account" GridPane.rowIndex="1">
+            <Label fx:id="lblPaymentFromTheAccount" text="Payment from the account" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
@@ -81,22 +79,22 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label fx:id="lblDate" text="سه شنبه.19 اسفند 1402 18:15" GridPane.halignment="RIGHT">
+            <Label fx:id="lblDate" text="سه شنبه.19 اسفند 1402 18:15" textFill="WHITE" GridPane.halignment="CENTER">
                <font>
                   <Font name="Agency FB" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="lblReferenceNoNumber" text="14021494665754" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <Label fx:id="lblReferenceNoNumber" text="14021494665754" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblIssueTrackingNumber" text="1239866093" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <Label fx:id="lblIssueTrackingNumber" alignment="CENTER" text="1239866093" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font name="Agency FB" size="20.0" />
                </font>
             </Label>
-            <Label fx:id="lblIRNumber" text="IR - 32 0560 6118 2800 5498 2092 01" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+            <Label fx:id="lblIRNumber" text="87946512" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font name="Agency FB" size="14.0" />
                </font>

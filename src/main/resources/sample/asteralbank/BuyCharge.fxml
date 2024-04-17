@@ -13,9 +13,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="409.0" styleClass="item-Css" stylesheets="@FirstCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.asteralbank.BuyCharge">
    <children>
       <ListView fx:id="listTransfer" layoutY="80.0" prefHeight="502.0" prefWidth="410.0" style="-fx-background-radius: 0;" styleClass="card1" />
-      <AnchorPane layoutX="-189.0" layoutY="107.0" prefHeight="65.0" prefWidth="753.0" style="-fx-background-color: #d9d9d9;" />
-      <AnchorPane layoutX="205.0" layoutY="74.0" prefHeight="621.0" prefWidth="65.0" rotate="39.8" style="-fx-background-color: white;" />
-      <Label fx:id="lblBuyCharge" layoutX="167.0" layoutY="38.0" text="Buy charge" textFill="WHITE">
+      <Label fx:id="lblBuyCharge" layoutX="167.0" layoutY="15.0" text="Buy charge" textFill="WHITE">
          <font>
             <Font name="Freestyle Script" size="25.0" />
          </font>
@@ -35,12 +33,7 @@
             <Image url="@back2.png" />
          </image>
       </ImageView>
-      <TextField fx:id="TxtPhoneNumber" layoutX="30.0" layoutY="125.0" prefHeight="25.0" prefWidth="206.0" styleClass="Text-Field" />
-      <Label fx:id="lblEror" alignment="CENTER" layoutX="28.0" layoutY="4.0" prefHeight="32.0" prefWidth="347.0" text="wellcome to Asral bank" textFill="RED">
-         <font>
-            <Font name="Lucida Fax Regular" size="15.0" />
-         </font>
-      </Label>
+      <TextField fx:id="TxtPhoneNumber" layoutX="30.0" layoutY="125.0" prefHeight="25.0" prefWidth="206.0" styleClass="TT" />
       <Button fx:id="BtnCharge" layoutX="9.0" layoutY="499.0" mnemonicParsing="false" onAction="#Charge" prefHeight="42.0" prefWidth="391.0" styleClass="Button-Charge" text="       Charge" textFill="WHITE">
          <font>
             <Font size="15.0" />

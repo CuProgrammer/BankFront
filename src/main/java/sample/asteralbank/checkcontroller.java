@@ -219,7 +219,8 @@ public class checkcontroller {
                             Integer.parseInt(month.getText()),
                             Integer.parseInt(day.getText())));
             DataRepository.chequeManager.add(cheque);
-
+            Stage stage2 =(Stage) Back.getScene().getWindow();
+            stage2.close();
             Stage stage=new Stage();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Main.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
