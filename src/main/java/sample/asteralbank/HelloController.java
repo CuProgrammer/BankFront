@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -19,8 +21,8 @@ public class HelloController {
     @FXML
     private Label Account;
 
-    @FXML
-    private Label lblEror;
+    //@FXML
+    //private Label lblEror;
 
     @FXML
     private Label Astral;
@@ -64,7 +66,11 @@ public class HelloController {
         String password = Password.getText();
         DataRepository.user = DataRepository.userManager.login(username, password);
         if (DataRepository.user == null) {
-            lblEror.setText("Wrong username or password");
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong username or password");
+            alert.showAndWait();
             return;
         }
 
